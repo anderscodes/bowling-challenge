@@ -1,4 +1,3 @@
 function Bonus() {
-  this.strikeCount = 0
-  this.spareCount = 0
+  this.multiplier = 0
 }

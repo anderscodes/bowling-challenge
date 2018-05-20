@@ -33,7 +33,7 @@ describe("Frame", function () {
     it("Checks if there is a strike", function() {
       frame.roll(10)
       frame.strikeCheck()
-      expect(bonus.strikeCount).toEqual(1)
+      expect(bonus.multiplier).toEqual(2)
     });
   });
 
@@ -42,7 +42,7 @@ describe("Frame", function () {
       frame.roll(4)
       frame.roll(6)
       frame.spareCheck()
-      expect(bonus.spareCount).toEqual(1)
+      expect(bonus.multiplier).toEqual(1)
     });
   });
 

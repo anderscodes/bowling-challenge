@@ -11,13 +11,13 @@ Frame.prototype.roll = function(pins) {
 
 Frame.prototype.strikeCheck = function() {
   if (this.frameScore === 10 && this.rollCount === 1) {
-  bonus.strikeCount++
+  bonus.multiplier += 2
    }
 }
 
 Frame.prototype.spareCheck = function() {
   if (this.frameScore === 10 && this.frameScore && 2) {
-    bonus.spareCount++
+    bonus.multiplier++
   }
 }
 
