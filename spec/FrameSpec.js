@@ -11,6 +11,12 @@ describe("Frame", function () {
     });
   });
 
+  describe("rollScore", function() {
+    it("should start at 0", function() {
+      expect(frame.rollScore).toEqual(0)
+    });
+  });
+
   describe("frameScore", function() {
     it("should start at 0", function() {
       expect(frame.frameScore).toEqual(0)
@@ -26,6 +32,12 @@ describe("Frame", function () {
     it("increases the frame score by 5", function() {
       frame.roll(5)
       expect(frame.frameScore).toEqual(5)
+    });
+
+    it("sets the rollScore", function() {
+      frame.roll(6)
+      frame.roll(8)
+      expect(frame.rollScore).toEqual(8)
     });
   });
 

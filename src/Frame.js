@@ -1,16 +1,17 @@
 function Frame() {
   this.rollCount = 0
   this.frameScore = 0
-  bonus = new Bonus
+  this.rollScore = 0
 }
 
 Frame.prototype.roll = function(pins) {
   this.rollCount++
   this.frameScore += pins
+  this.rollScore = pins
 }
 
 Frame.prototype.strikeCheck = function() {
-  if (this.frameScore === 10 && this.rollCount === 1) {
+  if (this.rollScore === 10) {
   bonus.multiplier += 2
    }
 }
